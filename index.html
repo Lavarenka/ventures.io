@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shard Horizon</title>
+<meta name="description" content="A single fractured stone, held together by nothing but its own light, turning above a sea that never quite resolves.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..680&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="scene"></canvas>
+<div class="grain"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="brand">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L22 8V16L12 22L2 16V8L12 2Z" stroke="currentColor" stroke-width="1.2"/></svg>
+    SHARD // FIELD
+  </div>
+
+  <nav class="menu" id="navMenu">
+    <a href="#hero">Field</a>
+    <a href="#structure">Structure</a>
+    <a href="#sea">The Sea</a>
+    <a href="#dissolve">Dissolve</a>
+    <a href="#apply">Apply</a>
+  </nav>
+
+  <div class="nav-status">
+    <span class="dot"></span>LIVE — DEPTH 04
+  </div>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span></button>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div id="heroText">
+      <p class="eyebrow">A structure, breaking slowly</p>
+      <h1>Something is <b>crystallizing</b><br>above the fog line.</h1>
+      <p class="lede">A single fractured stone, held together by nothing but its own light — turning above a sea that never quite resolves.</p>
+    </div>
+    <span class="scroll-hint">Scroll to approach</span>
+  </section>
+
+  <section class="section" id="structure" data-align="left">
+    <div class="panel">
+      <p class="eyebrow">What holds it together</p>
+      <h2>The <b>fractures</b> aren't damage.<br>They're the structure.</h2>
+      <p>Every vein of light across the stone traces a real fault line — generated procedurally, no two views ever land on quite the same pattern. What looks broken is what's actually load-bearing.</p>
+      <p>The surface itself is a single continuous form, deformed and lit in real time, entirely in your browser.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sea" data-align="right">
+    <div class="panel">
+      <p class="eyebrow">What it's suspended above</p>
+      <h2>A sea with <b>no shoreline</b>,<br>only depth.</h2>
+      <p>Layered swells, chop, and fine ripple move independently across the surface — lit from a single low sun that never quite sets. Watch long enough and the horizon stops looking flat.</p>
+      <div class="stat-grid">
+        <div class="stat"><span class="num">3</span><span class="label">wave octaves</span></div>
+        <div class="stat"><span class="num">50k+</span><span class="label">surface points</span></div>
+        <div class="stat"><span class="num">∞</span><span class="label">unrepeating motion</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="dissolve" data-align="left">
+    <div class="panel panel-wide">
+      <p class="eyebrow">What happens if you keep going</p>
+      <h2>Everything solid is <b>on loan</b>.</h2>
+      <p>Scroll back up toward the field and the stone doesn't break apart randomly — it returns to the six thousand points it was always made of, each one already carrying its own direction, waiting.</p>
+      <p class="colophon">Built with Three.js and a handful of hand-written GLSL — running at <span id="fpsValue">60</span> fps on this device.</p>
+    </div>
+  </section>
+
+  <section class="section form-section" id="apply" data-align="center">
+    <div class="panel form-panel">
+      <p class="eyebrow">Get in the field</p>
+      <h2>Leave a mark before it <b>dissolves</b>.</h2>
+      <p>An open call for whoever wants to build past this concept — collaborators, critics, or just people who want to see where it goes next.</p>
+
+      <form id="applyForm" novalidate>
+        <div class="field">
+          <label for="fName">Name</label>
+          <input id="fName" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="fEmail">Email</label>
+          <input id="fEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="fMessage">Message <span style="opacity:0.6;text-transform:none;letter-spacing:0;">(optional)</span></label>
+          <textarea id="fMessage" name="message" rows="4" placeholder="What draws you to it?"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>© Field Study, <span id="year"></span></span>
+  <div class="foot-links">
+    <a href="#hero">Field</a>
+    <a href="#structure">Structure</a>
+    <a href="#sea">The Sea</a>
+    <a href="#apply">Apply</a>
+  </div>
+</footer>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>

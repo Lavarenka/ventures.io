@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#0e1c30"/>
+      <stop offset="100%" stop-color="#030608"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <!-- fractured stone silhouette -->
+  <path d="M32 8 L44 20 L46 34 L38 52 L26 54 L18 40 L16 24 L24 12 Z" fill="#16283c" stroke="#3a5670" stroke-width="0.6"/>
+  <!-- glowing crack veins -->
+  <g stroke="#dfefff" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.95">
+    <path d="M32 10 L30 22 L36 30 L28 38 L32 50"/>
+    <path d="M30 22 L20 26"/>
+    <path d="M36 30 L45 28"/>
+    <path d="M28 38 L19 42"/>
+  </g>
+  <g stroke="#8fc4ff" stroke-width="0.8" stroke-linecap="round" fill="none" opacity="0.6">
+    <path d="M32 10 L30 22 L36 30 L28 38 L32 50"/>
+  </g>
+</svg>
