@@ -41,7 +41,7 @@ then visit `http://localhost:8000`.
 
 ## Publishing
 
-The repo name suggests GitHub Pages — check whether it's enabled under repository **Settings → Pages → Build and deployment → Source: Deploy from a branch**, branch `main`, folder `/ (root)`. Once enabled, the site publishes at `https://<username>.github.io/ventures.io/`.
+The repo name suggests GitHub Pages — check whether it's enabled under repository **Settings → Pages → Build and deployment → Source: Deploy from a branch**, branch `main`, folder `/ (root)`. Once enabled, the site publishes at `https://lavarenka.github.io/ventures.io/`.
 
 ## Notes
 
